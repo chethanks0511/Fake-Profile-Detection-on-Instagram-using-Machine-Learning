@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake Profile Prediction page</title>
+  <!--  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style1.css')}}">-->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+
+    .row.content {height: 550px}
+
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+      padding:15px;}
+
+      a.more-link{ background-color: #000000;
+         color: white;
+         padding: 14px 25px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+        }
+
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+
+body {
+/* background-color: #73AD21 !important; */
+/* background-image:url(https://wallpaperplay.com/walls/full/d/2/f/58025.jpg); */
+background-repeat : no-repeat;
+font-family: Arial, Helvetica, sans-serif;
+background-size : cover;
+}
+* {box-sizing: border-box}
+
+input[type=text], input[type=email], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+ signin{
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.bg{
+  background-color: #cdc1ff;
+background-image: linear-gradient(316deg, #cdc1ff 0%, #e5d9f2 74%);
+}
+</style>
+
+</head>
+    <body>
+
+    <div class="topnav">
+
+        <a href="/">Home</a>
+         
+       
+         <a href="/logout" style="float: right;">Logout</a>
+
+    </div>
+
+
+<div class="bg">
+  <form action="/predict1" method="POST">
+
+      <center><h1>PREDICTION</h1></center>
+  <label for="profile">Profile Picture Available or Not?</label>
+    <input type="text" id="profile" name="comment1" placeholder="If Yes Enter 1 else Enter 0">
+	  
+	<label for="usern">Enter The Username</label>
+    <input type="text" id="usern" name="comment2" placeholder="Enter Username">
+	
+	<label for="no">Enter the total number of words in the Account name</label>
+    <input type="text" id="no" name="comment3" placeholder="Enter number of words">
+	
+	<label for="aname">Enter the account name</label>
+    <input type="text" id="aname" name="comment4" placeholder="Enter the Account Name">
+	
+	<label for="same">Account name and username are same or not?</label>
+    <input type="text" id="same" name="comment5" placeholder="If Yes Enter 1 else Enter 0">
+	
+	<label for="dlength">Enter the total length of the description</label>
+    <input type="text" id="dlength" name="comment6" placeholder="Enter length of description">
+	
+	<label for="url">External URL present or not? </label>
+    <input type="text" id="url" name="comment7" placeholder="If Yes Enter 1 else Enter 0">
+	
+	<label for="private">Account is Private or not?</label>
+    <input type="text" id="private" name="comment8" placeholder="If Yes Enter 1 else Enter 0">
+	
+	<label for="post">Total Number of posts </label>
+    <input type="text" id="post" name="comment9" placeholder="Enter the number of posts">
+	
+	<label for="follower">Total number of Followers</label>
+    <input type="text" id="follower" name="comment10" placeholder="Enter the followers count">
+	
+	<label for="follow">Total number of Following</label>
+    <input type="text" id="follow" name="comment11" placeholder="Enter the following count">
+	
+	
+	 
+    
+    <input type="Submit" value="Submit">
+  </form>
+</div>
+    </body>
+</html>
